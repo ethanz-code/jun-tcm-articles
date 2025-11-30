@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TIMELINE_DATA, INTRO_TEXT } from './constants';
 import { TimelineItem } from './components/TimelineItem';
 import { ScrollText, Info } from 'lucide-react';
 
+const SCROLL_STORAGE_KEY = 'tcm_timeline_scroll_pos';
+
 const App: React.FC = () => {
+  
+  useEffect(() => {
+    // 1. 恢复滚动位置
+    // 在组件挂载后，检查 sessionStorage 是否有记录
+    const savedPosition = sessionStorage.getItem(SCROLL_STORAGE_KEY);
+    if (savedPosition) {
+      // 使用 setTimeout 确保 DOM 渲染完成后再滚动，避免滚动失效
+      setTimeout(() => {
+        window.scrollTo({
+          top: parseInt(savedPosition, 10),
+          behavior: 'auto' // 使用 auto 直接跳转，如果想要平滑效果可以使用 'smooth'
+        });
+      }, 50);
+    }
+
+    // 2. 监听滚动并保存
+    let debounceTimer: ReturnType<typeof setTimeout>;
+
+    const handleScroll = () => {
+      // 防抖处理：停止滚动 100ms 后再保存，减少性能消耗
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const currentScrollY = window.scrollY;
+        sessionStorage.setItem(SCROLL_STORAGE_KEY, currentScrollY.toString());
+      }, 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // 清理函数
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(debounceTimer);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center sm:py-10 sm:px-6">
       <main className="w-full max-w-2xl bg-white sm:shadow-xl sm:rounded-2xl overflow-hidden sm:border border-slate-100">

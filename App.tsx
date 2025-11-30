@@ -5,8 +5,8 @@ import { ScrollText, Info } from 'lucide-react';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center py-10 px-4 sm:px-6">
-      <main className="w-full max-w-2xl bg-white shadow-xl rounded-2xl overflow-hidden border border-slate-100">
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center sm:py-10 sm:px-6">
+      <main className="w-full max-w-2xl bg-white sm:shadow-xl sm:rounded-2xl overflow-hidden sm:border border-slate-100">
         
         {/* Header Section */}
         <div className="bg-sky-700 p-8 text-white relative overflow-hidden">

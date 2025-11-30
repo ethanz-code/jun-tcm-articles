@@ -37,7 +37,7 @@ const App: React.FC = () => {
 
         {/* Footer */}
         <div className="bg-slate-50 p-6 text-center text-slate-400 text-sm border-t border-slate-100">
-          <p>© 中医药发展考察足迹 · 历史记录</p>
+          <p>© 中医药发展考察足迹</p>
         </div>
       </main>
     </div>

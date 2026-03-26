@@ -8,4 +8,5 @@ export interface TimelineEvent {
   date: string;
   content: string;
   links: SourceLink[];
+  country?: string;
 }

@@ -1,31 +1,31 @@
-import React, { useEffect } from 'react';
-import { TIMELINE_DATA, INTRO_TEXT } from './constants';
+import React, { useEffect, useState } from 'react';
+import { TIMELINE_DATA, INTRO_TEXT, INTERNATIONAL_DATA } from './constants';
 import { TimelineItem } from './components/TimelineItem';
-import { ScrollText, Info } from 'lucide-react';
+import { ScrollText, Info, Globe } from 'lucide-react';
 
 const SCROLL_STORAGE_KEY = 'tcm_timeline_scroll_pos';
 
+type TabType = 'domestic' | 'international';
+
 const App: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<TabType>('domestic');
   
   useEffect(() => {
-    // 1. 恢复滚动位置
-    // 在组件挂载后，检查 sessionStorage 是否有记录
+    // 恢复滚动位置
     const savedPosition = sessionStorage.getItem(SCROLL_STORAGE_KEY);
     if (savedPosition) {
-      // 使用 setTimeout 确保 DOM 渲染完成后再滚动，避免滚动失效
       setTimeout(() => {
         window.scrollTo({
           top: parseInt(savedPosition, 10),
-          behavior: 'auto' // 使用 auto 直接跳转，如果想要平滑效果可以使用 'smooth'
+          behavior: 'auto'
         });
       }, 50);
     }
 
-    // 2. 监听滚动并保存
+    // 监听滚动并保存
     let debounceTimer: ReturnType<typeof setTimeout>;
 
     const handleScroll = () => {
-      // 防抖处理：停止滚动 100ms 后再保存，减少性能消耗
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
         const currentScrollY = window.scrollY;
@@ -35,12 +35,23 @@ const App: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // 清理函数
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(debounceTimer);
     };
   }, []);
+
+  const handleTabChange = (tab: TabType) => {
+    setActiveTab(tab);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    sessionStorage.removeItem(SCROLL_STORAGE_KEY);
+  };
+
+  const currentData = activeTab === 'domestic' ? TIMELINE_DATA : INTERNATIONAL_DATA;
+  const introText = activeTab === 'domestic' 
+    ? INTRO_TEXT 
+    : "习近平总书记国际主要的中医药足迹内容";
+  const tabLabel = activeTab === 'domestic' ? '国内' : '国际';
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center sm:py-10 sm:px-6">
@@ -52,7 +63,7 @@ const App: React.FC = () => {
             <ScrollText size={200} />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold leading-relaxed relative z-10 tracking-wide">
-            {INTRO_TEXT}
+            {introText}
           </h1>
           <div className="mt-4 flex items-center text-sky-100 text-sm font-medium">
              <Info className="w-4 h-4 mr-2" />
@@ -60,14 +71,46 @@ const App: React.FC = () => {
           </div>
         </div>
 
+        {/* Tab Navigation */}
+        <div className="flex border-b border-slate-200">
+          <button
+            onClick={() => handleTabChange('domestic')}
+            className={`flex-1 py-4 text-center font-medium transition-colors relative ${
+              activeTab === 'domestic'
+                ? 'text-sky-700'
+                : 'text-slate-500 hover:text-slate-700'
+            }`}
+          >
+            <span className={activeTab === 'domestic' ? 'font-bold' : ''}>国内足迹</span>
+            {activeTab === 'domestic' && (
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-700" />
+            )}
+          </button>
+          <button
+            onClick={() => handleTabChange('international')}
+            className={`flex-1 py-4 text-center font-medium transition-colors relative flex items-center justify-center gap-2 ${
+              activeTab === 'international'
+                ? 'text-sky-700'
+                : 'text-slate-500 hover:text-slate-700'
+            }`}
+          >
+            <Globe size={18} />
+            <span className={activeTab === 'international' ? 'font-bold' : ''}>国际足迹</span>
+            {activeTab === 'international' && (
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-700" />
+            )}
+          </button>
+        </div>
+
         {/* Timeline Content */}
         <div className="p-6 sm:p-10 bg-white">
           <div className="space-y-2">
-            {TIMELINE_DATA.map((event, index) => (
+            {currentData.map((event, index) => (
               <TimelineItem 
                 key={event.id} 
                 event={event} 
-                isLast={index === TIMELINE_DATA.length - 1}
+                isLast={index === currentData.length - 1}
+                isInternational={activeTab === 'international'}
               />
             ))}
           </div>

@@ -13,12 +13,12 @@ export const TimelineButton: React.FC<TimelineButtonProps> = ({
   return (
     <a
       href={url}
-      target="_self"
+      target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center justify-center w-64 py-2.5 px-4 rounded-full border border-sky-600 text-sky-700 font-medium bg-white transition-all duration-300 hover:bg-sky-600 hover:text-white hover:shadow-lg active:scale-95"
+      className="inline-flex items-center gap-1.5 py-1.5 px-3.5 rounded-lg border border-[#CDD6E4] text-sm text-[#3B6B9E] bg-[#F4F7FB] hover:bg-[#EAF0F8] hover:border-[#A8BED8] hover:text-[#1A3A6B] transition-colors duration-200"
     >
       <span>{label}</span>
-      <ExternalLink className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <ExternalLink className="w-3 h-3 opacity-35" />
     </a>
   );
 };

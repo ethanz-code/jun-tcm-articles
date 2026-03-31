@@ -236,140 +236,259 @@ export const INTERNATIONAL_DATA: TimelineEvent[] = [
     id: "int-1",
     date: "2010年6月20日",
     country: "澳大利亚",
-    content: "习近平在澳大利亚皇家墨尔本理工大学中医孔子学院授牌仪式",
-    links: [],
+    content:
+      "习近平在澳大利亚墨尔本出席皇家墨尔本理工大学中医孔子学院授牌仪式。",
+    links: [
+      {
+        label: "新华网",
+        url: "https://www.xinhuanet.com/world/2010-06/20/c_12240397.htm",
+      },
+    ],
   },
   {
     id: "int-2",
-    date: "2013年9月13日",
+    date: "2013年9月11日",
     country: "吉尔吉斯斯坦",
-    content: "习近平参观中方在吉建设的医疗机构，合作建设中医药医疗机构，表示希望以实际举措造福当地民众",
-    links: [],
+    content:
+      "习近平表示，中方愿意同各成员国合作建设中医医疗机构，充分利用传统医学资源为成员国人民健康服务。",
+    links: [
+      {
+        label: "国家中医药管理局",
+        url: "http://www.natcm.gov.cn/guohesi/gongzuodongtai/2018-03-24/3727.html",
+      },
+    ],
   },
   {
     id: "int-3",
     date: "2013年10月21日",
     country: "马其顿",
-    content: "习近平会见马其顿总理格鲁埃夫斯基，表示中方愿向马方大学华语谷领域交互",
-    links: [],
+    content:
+      "习近平会见马其顿总统伊万诺夫，表示中方愿同马方扩大中医药等领域交流。",
+    links: [
+      {
+        label: "国家中医药管理局",
+        url: "http://www.natcm.gov.cn/bangongshi/gongzuodongtai/2018-03-25/5338.html",
+      },
+    ],
   },
   {
     id: "int-4",
     date: "2014年3月27日",
     country: "法国",
-    content: `习近平在巴黎联合国教科文组织总部表示，"中医药带进进入西方人的日常生活"`,
-    links: [],
+    content:
+      "习近平在巴黎联合国教科文组织总部表示，中国医药要进入西方民众日常生活。",
+    links: [
+      {
+        label: "人民网",
+        url: "https://cpc.people.com.cn/n/2014/0328/c64094-24759342-2.html",
+      },
+    ],
   },
   {
     id: "int-5",
     date: "2014年9月18日",
     country: "印度",
-    content: "习近平出席世界经济论坛会贵方，中国大熊猫印度餐馆，中间中医10印度托普医院花相赠以处",
-    links: [],
+    content:
+      "习近平在印度世界事务委员会表示，中国太极和印度瑜伽、中国中医和印度阿育吠陀有相似之处。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2014-09/19/content_2752799.htm",
+      },
+    ],
   },
   {
     id: "int-6",
     date: "2014年11月17日",
     country: "澳大利亚",
-    content: "习近平在澳大利亚签署并共同出席北京中医药大学和西悉尼大学签署建立中医中心的合作协议",
-    links: [],
+    content:
+      "习近平与澳大利亚总理阿博特共同见证北京中医药大学和西悉尼大学签署建立中医中心的合作协议。",
+    links: [
+      {
+        label: "北京中医药大学",
+        url: "https://www.bucm.edu.cn/jblm/xxxw/2708.htm",
+      },
+    ],
   },
   {
     id: "int-7",
     date: "2015年7月10日",
     country: "俄罗斯",
-    content: "习近平在上海合作组织成员国元首座谈第十五次会议上表示，中方愿与各国研究探讨中医药合作",
-    links: [],
+    content:
+      "习近平在上海合作组织成员国元首理事会第十五次会议上表示，中方愿同各国研究探讨中医药合作。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2015-07/11/content_2895373.htm",
+      },
+    ],
   },
   {
     id: "int-8",
     date: "2016年3月28日",
     country: "捷克",
-    content: "习近平对捷克进行国事访问，支持传统中医中心的不断建设和发展",
-    links: [],
+    content:
+      "习近平对捷克进行国事访问，支持中捷中医中心的不断建设和发展。",
+    links: [
+      {
+        label: "人民网",
+        url: "https://world.people.com.cn/n1/2016/0330/c1002-28236545.html",
+      },
+    ],
   },
   {
     id: "int-9",
     date: "2016年6月13日",
     country: "德国",
-    content: "习近平中共贝德图拉德斯的向以示中方支持德国在传统中医等领域合作",
-    links: [],
+    content:
+      "习近平会见德国总理默克尔时表示，中方支持两国在传统中医药等领域合作。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2016-06/13/content_5081819.htm",
+      },
+    ],
   },
   {
     id: "int-10",
     date: "2017年1月18日",
     country: "瑞士",
-    content: "习近平在日内瓦出席世卫组织总部全球健康论坛，主席范志远发表仪式",
-    links: [],
+    content:
+      "习近平在日内瓦出席中国向世界卫生组织赠送针灸铜人雕塑仪式。",
+    links: [
+      {
+        label: "人民网",
+        url: "http://health.people.com.cn/n1/2017/0123/c14739-29043197.html",
+      },
+    ],
   },
   {
     id: "int-11",
-    date: "2018年7月25日",
+    date: "2018年7月22日",
     country: "南非",
-    content: "习近平在南非，推动中医药立法应用病房，为南非举行乃好建建健康促进新选择",
-    links: [],
+    content:
+      "习近平表示，推动中医药疗法祛病除疾，为南非民众增进健康提供新选择。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2018-07/22/content_5308413.htm",
+      },
+    ],
   },
   {
     id: "int-12",
     date: "2019年6月14日",
     country: "吉尔吉斯斯坦",
-    content: "习近平参观中方在吉援建的医疗设施，改善民众健康、推动医疗卫生水平",
-    links: [],
+    content:
+      "习近平表示，中方愿意发挥传统医学优势，改善民众健康，提高医疗卫生水平。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/gongbao/content/2019/content_5404144.htm",
+      },
+    ],
   },
   {
     id: "int-13",
     date: "2019年11月12日",
     country: "希腊",
-    content: `习近平到雅典卫城阿特斯领，千名病症在上的"望大楼"要求谈对古代中医`,
-    links: [],
+    content: `习近平参观雅典卫城博物馆，中希两国元首从古希腊大理石雕像上的"拔火罐"图案谈到古代中医。`,
+    links: [
+      {
+        label: "中国新闻网",
+        url: "https://m.chinanews.com/wap/detail/chs/zw/9009042.shtml",
+      },
+    ],
   },
   {
     id: "int-14",
     date: "2021年6月2日",
     country: "哈萨克斯坦",
-    content: "习近平表示与哈萨克斯坦在传统医疗、传统医学学等领域合作",
-    links: [],
+    content:
+      "习近平表示愿同哈萨克斯坦在远程医疗、传统医学等领域合作。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2021-06/02/content_5615077.htm",
+      },
+    ],
   },
   {
     id: "int-15",
     date: "2022年1月10日",
-    country: "白俄罗斯",
-    content: "习近平在双边联合联合总统卡申科举行通电话，白方欢迎继续中方深化中医药合作",
-    links: [],
+    country: "马耳他",
+    content:
+      "习近平同马耳他总统乔治·维拉就文化交流和中医药合作进行沟通。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2022-01/10/content_5667666.htm",
+      },
+    ],
   },
   {
     id: "int-16",
-    date: "2022年9月10日",
-    country: "马耳他",
-    content: "习近平访问马其他疫情后续，推动文化交流和中医药合作进行走进",
-    links: [],
+    date: "2022年1月10日",
+    country: "白俄罗斯",
+    content:
+      "习近平同白俄罗斯总统卢卡申科通电话，白方希望同中方深化中医药合作。",
+    links: [
+      {
+        label: "人民网",
+        url: "https://paper.people.com.cn/rmrbhwb/html/2022-01/11/content_25897845.htm",
+      },
+    ],
   },
   {
     id: "int-17",
     date: "2022年12月9日",
     country: "沙特阿拉伯",
-    content: "习近平在首脑峰会，中方积极实施小型工农业的具体项目",
-    links: [],
+    content:
+      "习近平在首届中国—阿拉伯国家峰会上表示，中方继续实施5个中医药合作项目。",
+    links: [
+      {
+        label: "新华网",
+        url: "https://www.news.cn/world/2022-12/10/c_1129197240.htm",
+      },
+    ],
   },
   {
     id: "int-18",
     date: "2023年1月6日",
     country: "土库曼斯坦",
-    content: "习近平会见土库曼斯坦总统别尔江尼，表示希望共建设传统医学中心",
-    links: [],
+    content:
+      "习近平会见土库曼斯坦总统谢尔达尔·别尔德穆哈梅多夫，表示要在土库曼斯坦设立传统医学中心。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/xinwen/2023-01/06/content_5735360.htm",
+      },
+    ],
   },
   {
     id: "int-19",
     date: "2024年7月5日",
     country: "塔吉克斯坦",
-    content: "习近平对塔吉克斯坦进行国事访问，对中医中医药医疗机构给予至高评润",
-    links: [],
+    content:
+      "习近平对塔吉克斯坦进行国事访问，对中塔中医药中心给予高度评价。",
+    links: [
+      {
+        label: "中国政府网",
+        url: "https://www.gov.cn/yaowen/liebiao/202407/content_6961606.htm",
+      },
+    ],
   },
   {
     id: "int-20",
-    date: "2025年4月16日",
+    date: "2025年4月18日",
     country: "柬埔寨",
-    content: "习近平对柬埔寨进行首访，双方共建推动传统医学合作，建设中医中心等项目",
-    links: [],
+    content:
+      "习近平对柬埔寨王国进行国事访问，双方同意深化传统医学等领域交流合作，推进中柬中医药中心建设。",
+    links: [
+      {
+        label: "学习强国",
+        url: "https://www.xuexi.cn/lgpage/detail/index.html?id=8009419819163204975&item_id=8009419819163204975",
+      },
+    ],
   },
 ];
